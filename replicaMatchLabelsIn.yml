@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+      name: webappreplicaset2
+      labels:
+          app: webappreplicaset2
+
+spec:
+    replicas: 3
+    template: 
+              metadata:  #like a tag
+                      name: webappreplicaset2
+                      labels:
+                        app: webappreplicaset2
+              spec:
+                 containers:
+                    - name: mypod-cont1
+                      image: nginx:latest
+                      resources: 
+                          requests:
+                            cpu: "50m"
+                            memory: "100Mi"        
+                      ports:  
+                        - name: http
+                          containerPort: 80
+                          protocol: TCP
+
+    selector:
+            matchLabels:
+                app: webappreplicaset2
+            # matchExpressions:
+            #              - {key: app , operator: In , values: [webappreplicaset , mobappreplica]}                    
