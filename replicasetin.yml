@@ -13,17 +13,17 @@ spec:
                       labels:
                         app: webappreplicaset
               spec:
-              containers:
-                  - name: mypod-cont1
-                    image: nginx:latest
-                    resources: 
-                        requests:
-                          cpu: "50m"
-                          memory: "100Mi"        
-                    ports:  
-                      - name: http
-                        containerPort: 80
-                        protocol: TCP
+                 containers:
+                    - name: mypod-cont1
+                      image: nginx:latest
+                      resources: 
+                          requests:
+                            cpu: "50m"
+                            memory: "100Mi"        
+                      ports:  
+                        - name: http
+                          containerPort: 80
+                          protocol: TCP
 
     selector:
             matchexpression:
