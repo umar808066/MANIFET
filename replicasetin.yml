@@ -7,7 +7,7 @@ metadata:
 
 spec:
     replicas: 3
-    templates: 
+    template: 
               metadata:  #like a tag
                       name: webappreplicaset
                       labels:
