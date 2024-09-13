@@ -26,5 +26,5 @@ spec:
                           protocol: TCP
 
     selector:
-            matchexpression:
+            matchExpression:
                          - {key: app , operator: In , values: [webappreplicaset , mobappreplica]}                    
