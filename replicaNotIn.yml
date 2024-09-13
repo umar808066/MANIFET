@@ -27,4 +27,4 @@ spec:
 
     selector:
             matchExpressions:
-                         - {key: app , operator: In , values: [webappreplicaset , webappreplicaset2]}                    
+                         - {key: app , operator: NotIn , values: [webappreplicaset , webappreplicaset2]}                    
